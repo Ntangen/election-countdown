@@ -1,13 +1,30 @@
 {
-  "name": "Is-the-election-over-yet",
-  "description": "Twitter app for cutting-edge election detection!",
+  "name": "is-the-election-over",
   "version": "1.0.0",
-  "author": "Blair Reeves",
+  "description": "A twitter app that counts down to the 2016 election",
+  "main": "config.js",
   "dependencies": {
-    "twit": "2.1.0"
+    "async": "^0.2.9",
+    "colors": "^0.6.2",
+    "request": "^2.58.0",
+    "commander": "^2.6.0",
+    "rewire": "^2.3.4",
+    "sinon": "^1.15.4"
   },
-  "engines":{
-    "node": "0.12.x",
-    "npm": "2.11.x"
+  "devDependencies": {
+    "mocha": "^2.1.0"
   },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ntangen/election-countdown.git"
+  },
+  "author": "Blair Reeves",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ntangen/election-countdown/issues"
+  },
+  "homepage": "https://github.com/Ntangen/election-countdown#readme"
 }
