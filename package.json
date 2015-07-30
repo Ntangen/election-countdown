@@ -1,15 +1,11 @@
 {
-  "name": "Is the election over yet?",
+  "name": "Is-the-election-over-yet",
   "description": "Twitter app for cutting-edge election detection!",
-  "version": "0.0.1",
-  "author": {
-    "name": "Blair Reeves"
-  },
-  "engines":{
-    "node": "0.12.x",
-    "npm": "2.11.x"
-  },
+  "version": "1.0.0",
+  "author": "Blair Reeves",
   "dependencies": {
     "twit": "2.1.0"
-  }
+  },
+  "engines":{
+  },
 }
