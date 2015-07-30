@@ -3,6 +3,7 @@
 var Twitter = require('twit'); 
 var request = require('request');
 var config = require('./config');
+var count = require('./count');
 
 var twitter = new Twitter(config);
 
@@ -14,9 +15,19 @@ twitter.get('statuses/mentions_timeline', function (err, data){
 	if(err) return handleError(err);
 	var sn = data[0].user.screen_name;
 	console.log("we have a screen name: " + sn);
-	twitter.post('statuses/update', {status: "@" + sn + " hello back!"}, function (err, data, res){
-		console.log('I tweeted back');
-	});
+	var blurb = "@" + sn + ", there are " + 
+		count.DaysLeft() + " days, " + 
+		count.HoursLeft() + " hours, " + 
+		count.MinsLeft() + " minutes, " +
+		count.SecsLeft() + " seconds until the 2016 U.S. general election is over. " +
+		"Don't forget to vote! 🇺🇸" ;
+
+	twitter.post('statuses/update', {status: blurb}
+		, function (err, data, res){
+			if (err) return handleError(err);
+			else console.log('tweet deployed!');
+			});
+	console.log(blurb);
 });
 
 function handleError(err) {
