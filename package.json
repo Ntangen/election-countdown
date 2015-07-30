@@ -2,7 +2,9 @@
   "name": "is-the-election-over",
   "version": "1.0.0",
   "description": "A twitter app that counts down to the 2016 election",
-  "main": "config.js",
+  "engines": {
+    "node": "0.12.x"
+  },
   "dependencies": {
     "twit": "2.1.x"
   },
