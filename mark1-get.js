@@ -1,7 +1,6 @@
 // election countdown bot Mark 1
 
 var Twitter = require('twit'); 
-var request = require('request');
 var config = require('./config');
 var count = require('./count');
 
