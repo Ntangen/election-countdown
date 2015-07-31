@@ -34,7 +34,7 @@ stream.on('tweet', function (tweet){
 });	
 
 
-// function handleError(err) {
-//   console.error('response status:', err.statusCode);
-//   console.error('data:', err.data);
-// }
+function handleError(err) {
+  console.error('response status:', err.statusCode);
+  console.error('data:', err.data);
+}
