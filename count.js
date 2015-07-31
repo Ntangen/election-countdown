@@ -21,14 +21,14 @@ function  HoursLeft () {
 }
 
 function DaysLeft () {
-	return Math.floor(remaining / days);
+	return Math.floor(remaining / days).toString();
 }
 exports.TimeLeft = function() {
 	var blurb = " There are " + 
 		DaysLeft() + " days, " + 
-		HoursLeft() + " hours, " + 
-		MinsLeft() + " minutes, " +
-		SecsLeft() + " seconds until the 2016 U.S. general election is over. " +
+		// HoursLeft() + " hours, " + 
+		// MinsLeft() + " minutes, " +
+		// SecsLeft() + " seconds until the 2016 U.S. general election is over. " +
 		"Don't forget to vote! 🇺🇸" ;
 	return blurb;
 }

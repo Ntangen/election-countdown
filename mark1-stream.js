@@ -10,13 +10,6 @@ port = process.env.PORT || 3000;
 
 console.log('Mark 1 is running on port: ' + port);
 
-// var blurb = " There are " + 
-// 		count.DaysLeft() + " days, " + 
-// 		count.HoursLeft() + " hours, " + 
-// 		count.MinsLeft() + " minutes, " +
-// 		count.SecsLeft() + " seconds until the 2016 U.S. general election is over. " +
-// 		"Don't forget to vote! 🇺🇸" ;
-
 var stream = twitter.stream('statuses/filter', {track: "@isitoveryet2016"});
 
 stream.on('connect', function (response) {
