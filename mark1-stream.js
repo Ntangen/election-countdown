@@ -30,7 +30,8 @@ stream.on('connected', function (response) {
 stream.on('tweet', function (tweet){
 	console.log('we have something: \n'+ tweet.text);
 	console.log('user: ' + tweet.user.screen_name);
-	twitter.post('statuses/update', {status: "@" + tweet.user.screen_name + count.TimeLeft()}
+	var thisTweet = count.TimeLeft();
+	twitter.post('statuses/update', {status: "@" + tweet.user.screen_name + thisTweet}
 		, function (err, data, res){
 			if (err) return handleError(err);
 			else console.log('tweet deployed!');
