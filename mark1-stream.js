@@ -9,13 +9,11 @@ port = process.env.PORT || 3000;
 
 console.log('Mark 1 is running on port: ' + port);
 
-stream.on('connect', function (err, response) {
-	if (err) return handleError(err);
+stream.on('connect', function (response) {
 	console.log("Opening Twitter stream...")
 });
 
-stream.on('connected', function (err, response) {
-	if (err) return handleError(err);
+stream.on('connected', function (response) {
 	console.log("Connected and streaming!")
 });
 
