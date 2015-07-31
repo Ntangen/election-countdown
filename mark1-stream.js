@@ -1,16 +1,13 @@
 // election countdown bot Mark 1 - streaming
 
-var Twitter = require('twit'); 
 var config = require('./config');
 var count = require('./count');
-
+var Twitter = require('twit'); 
 var twitter = new Twitter(config);
-
+var stream = twitter.stream('statuses/filter', {track: "@isitoveryet2016"});
 port = process.env.PORT || 3000;
 
 console.log('Mark 1 is running on port: ' + port);
-
-var stream = twitter.stream('statuses/filter', {track: "@isitoveryet2016"});
 
 stream.on('connect', function (response) {
 	console.log("Opening Twitter stream...")
