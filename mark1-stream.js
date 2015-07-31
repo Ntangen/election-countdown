@@ -18,8 +18,9 @@ stream.on('connected', function (response) {
 });
 
 stream.on('tweet', function (tweet){
-	console.log('we have something: \n'+ tweet.text);
 	console.log('user: ' + tweet.user.screen_name);
+	console.log('text: \n'+ tweet.text);
+	console.log('id: ' + tweet.id)
 	var thisTweet = count.TimeLeft();
 	twitter.post('statuses/update', {status: "@" + 
 		tweet.user.screen_name + 

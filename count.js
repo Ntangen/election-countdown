@@ -24,6 +24,7 @@ function DaysLeft () {
 	return Math.floor(remaining / days).toString();
 }
 exports.TimeLeft = function() {
+	console.log("count function checkin");
 	var blurb = " There are " + 
 		DaysLeft() + " days, " + 
 		// HoursLeft() + " hours, " + 
