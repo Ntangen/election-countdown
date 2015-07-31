@@ -9,8 +9,6 @@ exports.TimeLeft = function() {
 	var hours = minutes * 60;
 	var days = hours * 24;
 	
-	console.log("count function checkin");
-	
 	var blurb = " There are " + 
 		DaysLeft() + " days, " + 
 		HoursLeft() + " hours, " + 
