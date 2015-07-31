@@ -8,11 +8,11 @@ This is where I'm working on my [twitter app](http://www.twitter.com/isitoveryet
 
 <b>Next steps</b> - Still collecting ideas. 
 	
-	- I think it would be convenient to set the bot only to respond to direct "@" tweets, not just mentions.
+	* I think it would be convenient to set the bot only to respond to direct "@" tweets, not just mentions.
 
-	- Adding commands would be an obvious next step. Eg. "how many days left?" or "how much time in seconds?" or something like that. 
+	* Adding commands would be an obvious next step. Eg. "how many days left?" or "how much time in seconds?" or something like that. 
 
-	- I've also thought about what other data sources I could plug into. I think the idea of returning some kind of campaign finance data - "how much did Bernie Sanders raise in Q3?" - might be kinda cool.
+	* I've also thought about what other data sources I could plug into. I think the idea of returning some kind of campaign finance data - "how much did Bernie Sanders raise in Q3?" - might be kinda cool.
 
-	- Have ideas? Let me know! [pleasewhen@istheelectionoveryet.com](mailto:pleasewhen@istheelectionoveryet.com)
+	* Have ideas? Let me know! [pleasewhen@istheelectionoveryet.com](mailto:pleasewhen@istheelectionoveryet.com)
 	
