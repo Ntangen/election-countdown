@@ -16,7 +16,8 @@ stream.on('connect', function (response) {
 	console.log("Opening Twitter stream...")
 });
 
-stream.on('connected', function (response) {
+stream.on('connected', function (err, response) {
+	if (err) return handleError(err);
 	console.log("Connected and streaming!")
 });
 
