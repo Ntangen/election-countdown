@@ -9,7 +9,8 @@ port = process.env.PORT || 3000;
 
 console.log('Mark 1 is running on port: ' + port);
 
-stream.on('connect', function (response) {
+stream.on('connect', function (err, response) {
+	if (err) return handleError(err);
 	console.log("Opening Twitter stream...")
 });
 
@@ -22,8 +23,9 @@ stream.on('tweet', function (tweet){
 	console.log('we have something: \n'+ tweet.text);
 	console.log('user: ' + tweet.user.screen_name);
 	var thisTweet = count.TimeLeft();
-	twitter.post('statuses/update', {status: "@" + tweet.user.screen_name + thisTweet}
-		, function (err, data, res){
+	twitter.post('statuses/update', {status: "@" + 
+		tweet.user.screen_name + 
+		thisTweet, in_reply_to_status_id: tweet.id}, function (err, data, res){
 			if (err) return handleError(err);
 			else console.log('tweet deployed!');
 			});
