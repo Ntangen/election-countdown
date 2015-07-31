@@ -8,18 +8,27 @@ var minutes = seconds * 60;
 var hours = minutes * 60;
 var days = hours * 24;
 
-exports.SecsLeft = function () {
+function SecsLeft () {
 	return Math.floor((remaining % minutes)/seconds);
 }
 
-exports.MinsLeft = function () {
+function MinsLeft () {
 	return Math.floor((remaining % hours) / minutes);
 }
 
-exports.HoursLeft = function () {
+function  HoursLeft () {
 	return Math.floor((remaining % days) / hours);
 }
 
-exports.DaysLeft = function () {
+function DaysLeft () {
 	return Math.floor(remaining / days);
+}
+exports.TimeLeft = function() {
+	var blurb = " There are " + 
+		DaysLeft() + " days, " + 
+		HoursLeft() + " hours, " + 
+		MinsLeft() + " minutes, " +
+		SecsLeft() + " seconds until the 2016 U.S. general election is over. " +
+		"Don't forget to vote! 🇺🇸" ;
+	return blurb;
 }

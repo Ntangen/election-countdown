@@ -10,12 +10,12 @@ port = process.env.PORT || 3000;
 
 console.log('Mark 1 is running on port: ' + port);
 
-var blurb = " There are " + 
-		count.DaysLeft() + " days, " + 
-		count.HoursLeft() + " hours, " + 
-		count.MinsLeft() + " minutes, " +
-		count.SecsLeft() + " seconds until the 2016 U.S. general election is over. " +
-		"Don't forget to vote! 🇺🇸" ;
+// var blurb = " There are " + 
+// 		count.DaysLeft() + " days, " + 
+// 		count.HoursLeft() + " hours, " + 
+// 		count.MinsLeft() + " minutes, " +
+// 		count.SecsLeft() + " seconds until the 2016 U.S. general election is over. " +
+// 		"Don't forget to vote! 🇺🇸" ;
 
 var stream = twitter.stream('statuses/filter', {track: "@isitoveryet2016"});
 
@@ -30,7 +30,7 @@ stream.on('connected', function (response) {
 stream.on('tweet', function (tweet){
 	console.log('we have something: \n'+ tweet.text);
 	console.log('user: ' + tweet.user.screen_name);
-	twitter.post('statuses/update', {status: "@" + tweet.user.screen_name + blurb}
+	twitter.post('statuses/update', {status: "@" + tweet.user.screen_name + count.TimeLeft()}
 		, function (err, data, res){
 			if (err) return handleError(err);
 			else console.log('tweet deployed!');
