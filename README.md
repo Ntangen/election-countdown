@@ -4,7 +4,7 @@
 
 This is where I'm working on my [twitter app](http://www.twitter.com/isitoveryet2016) that will return the number of days, hours, minutes and seconds until the 2016 U.S. election is over. You can see the web version [here.](http://www.istheelectionoveryet.com)
 
-<b>Mark1</b> - returns a countdown to a specific user. 
+<s>Mark1 - returns a countdown to a specific user.</s>
 
 <b>Mark2</b> - Various improvements. The Mark 2 only replies to direct tweets to @IsItOverYet2016, and ignores its own replies/other mentions. Changed around the count module to make sure the javascript was running appropriately so as to give the most updated time. Also added a bunch of console.log messages to keep the log clean and relevant.
 
