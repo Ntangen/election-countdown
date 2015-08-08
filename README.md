@@ -8,6 +8,8 @@ This is where I'm working on my [twitter app](http://www.twitter.com/isitoveryet
 
 <b>Mark2</b> - Various improvements. The Mark 2 only replies to direct tweets to @IsItOverYet2016, and ignores its own replies/other mentions. Changed around the count module to make sure the javascript was running appropriately so as to give the most updated time. Also added a bunch of console.log messages to keep the log clean and relevant.
 
+<b>Quick edit:</b> I changed the procfile to spin up this app on a worker dyno on Heroku, in order to get around the all-too-common Boot Timeout error.
+
 <b>Next steps</b> - Still collecting ideas. 
 <ul>	
 <li><s>I think it would be convenient to set the bot only to respond to direct "@" tweets, not just mentions.</s>Done!</li>
