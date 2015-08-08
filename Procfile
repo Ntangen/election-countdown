@@ -1,1 +1,1 @@
-web: node mark1-stream.js
+worker: node mark2.js
