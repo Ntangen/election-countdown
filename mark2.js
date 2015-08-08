@@ -37,7 +37,7 @@ stream.on('tweet', function (tweet){
 		console.log("Not a direct tweet, not replying.");
 	}
 });
-
+ 
 stream.on('warning', function (response) {
 	console.log(response);
 });
